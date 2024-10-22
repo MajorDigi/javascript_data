@@ -25,7 +25,11 @@ if (isSum50) {
 //Added function for local scope
 function checkOddNum(n1,n2,n3,n4) {
 const oddCount = (n1 % 2) + (n2 % 2) + (n3 % 2) + (n4 % 2) >= 2;
+ // Log the odd count for debugging
+ console.log(`Odd Count: ${oddCount}`);
 const isTwoOdd = oddCount >= 2;
+   // Log the result of the check
+   console.log(`isTwoOdd: ${isTwoOdd}`);
 
 if (isTwoOdd) {
     console.log(true);
@@ -33,6 +37,8 @@ if (isTwoOdd) {
     console.log(false);
   }
 }
+
+checkOddNum(n1,n2,n3.n4)
 //--------------------------------------------------------------------------------------------------
 
 // Check three: no number larger than 25
@@ -73,6 +79,7 @@ checkUniqueNum(n1,n2,n3,n4);
 checkUniqueNum(1,2,3,4) //Will console.log true
 checkUniqueNum(1,2,2,3) //Will console.log false
 //--------------------------------------------------------------------------------------------------------
+
 // Here, we put the results into a single variable 
 // for convenience. Note how we negate isOver25 using
 // the ! operator. We could also have tested for 
