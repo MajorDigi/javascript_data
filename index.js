@@ -7,13 +7,30 @@ const n4 = 5;
 // Check one: add up to 50
 // This is a fairly simple operation using
 // arithmetic operators and a comparison.
-const isSum50 = (n1 + n2 + n3 + n4) == 50;
+const isSum50 = (n1 + n2 + n3 + n4) === 50;
+
+if (isSum50) {
+    console.log(true);
+  } else {
+    console.log(false);
+  }
 
 // Check two: at least two odd numbers
 // Here, we use modulus to check if something is odd.
 // Since % 2 is 0 if even and 1 if odd, we can use
 // arithmetic to count the total number of odd numbers.
-const isTwoOdd = (n1 % 2) + (n2 % 2) + (n3 % 2) + (n4 % 2) >= 2;
+
+//Added function for local scope
+function checkOddNum(n1,n2,n3,n4) {
+const oddCount = (n1 % 2) + (n2 % 2) + (n3 % 2) + (n4 % 2) >= 2;
+const isTwoOdd = oddCount >= 2;
+
+if (isTwoOdd) {
+    console.log(true);
+  } else {
+    console.log(false);
+  }
+}
 
 // Check three: no number larger than 25
 // This time, we use the OR operator to check
