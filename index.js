@@ -15,6 +15,8 @@ if (isSum50) {
     console.log(false);
   }
 
+//--------------------------------------------------------------------------------------------------
+
 // Check two: at least two odd numbers
 // Here, we use modulus to check if something is odd.
 // Since % 2 is 0 if even and 1 if odd, we can use
@@ -31,6 +33,7 @@ if (isTwoOdd) {
     console.log(false);
   }
 }
+//--------------------------------------------------------------------------------------------------
 
 // Check three: no number larger than 25
 // This time, we use the OR operator to check
@@ -48,18 +51,28 @@ const isOver25 = n1 > 25 || n2 > 25 || n3 > 25 || n4 > 25;
 }
 
 // Call the function to check
-checkIsOver()
+checkIsOver(n1,n2,n3,n4)
 checkIsOver(10, 15, 20, 5);  // Will log false (none are over 25)
 checkIsOver(30, 15, 20, 5);  // Will log true (one number is over 25)
-
-
+//-----------------------------------------------------------------------------------------------------------
 
 // Check four: all unique numbers
 // This is long, and there are more efficient
 // ways of handling it with other data structures
 // that we will review later.
+//Added function 
+function checkUniqueNum(n1,n2,n3,n4) {
 const isUnique = n1 != n2 && n1 != n3 && n1 != n4 && n2 != n3 && n2 != n4 && n3 != n4;
-
+if (isUnique) {
+    console.log(true);
+} else {
+    console.log(false)
+ }
+}
+checkUniqueNum(n1,n2,n3,n4);
+checkUniqueNum(1,2,3,4) //Will console.log true
+checkUniqueNum(1,2,2,3) //Will console.log false
+//--------------------------------------------------------------------------------------------------------
 // Here, we put the results into a single variable 
 // for convenience. Note how we negate isOver25 using
 // the ! operator. We could also have tested for 
