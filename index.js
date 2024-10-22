@@ -78,6 +78,18 @@ const NumberChecker ={
         const allDivisibleByFive = numbers.every(num => num %5 ===0);
         console.log(`All numbers divisible by 5 : ${allDivisibleByFive}`);
         return allDivisibleByFive;
+    },
+
+// NumberChecker.DivByFive(t1, t2, t3, t4); // Should log "All numbers divisible by 5: true"
+
+//------------------------------------------------------------------------------------
+// Check if the first number is larger than the last number
+isFirstLargerThanLast: (t1,t2,t3,t4) => {
+    const isLarger =t1 > t4;
+    console.log (`First number (${t1}) is larger than the last number (${t4})`);
+    return isLarger
     }
 }
+// Example usage:
 NumberChecker.DivByFive(t1, t2, t3, t4); // Should log "All numbers divisible by 5: true"
+const firstIsLarger = NumberChecker.isFirstLargerThanLast(t1, t2, t3, t4); // Will log and cache the result
