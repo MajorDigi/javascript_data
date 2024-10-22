@@ -35,7 +35,24 @@ if (isTwoOdd) {
 // Check three: no number larger than 25
 // This time, we use the OR operator to check
 // if ANY of the numbers is larger than 25.
+//Added function
+function checkIsOver(n1,n2,n3,n4) {
+// Check if any number is larger than 25 using or (||) condition
 const isOver25 = n1 > 25 || n2 > 25 || n3 > 25 || n4 > 25;
+  // Use the correct condition
+  if (isOver25) {
+    console.log(true);  // If any number is larger than 25
+  } else {
+    console.log(false);  // If no numbers are larger than 25
+  }
+}
+
+// Call the function to check
+checkIsOver()
+checkIsOver(10, 15, 20, 5);  // Will log false (none are over 25)
+checkIsOver(30, 15, 20, 5);  // Will log true (one number is over 25)
+
+
 
 // Check four: all unique numbers
 // This is long, and there are more efficient
