@@ -64,3 +64,20 @@ const dontDoThis = ((n1 + n2 + n3 + n4) == 50) &&
   ((n1 % 2) + (n2 % 2) + (n3 % 2) + (n4 % 2) >= 2) && 
   !(n1 > 25 || n2 > 25 || n3 > 25 || n4 > 25) && 
   (n1 != n2 && n1 != n3 && n1 != n4 && n2 != n3 && n2 != n4 && n3 != n4);
+//-----------------------------------------------------------------------------------------------------------
+//Check if all numbers are divisible by 5 
+
+const t1 = 10;
+const t2 = 15;
+const t3 = 20;
+const t4 = 5;
+
+const NumberChecker ={
+    DivByFive: (t1,t2,t3,t4) => {
+        const numbers =[t1,t2,t3,t4];
+        const allDivisibleByFive = numbers.every(num => num %5 ===0);
+        console.log(`All numbers divisible by 5 : ${allDivisibleByFive}`);
+        return allDivisibleByFive;
+    }
+}
+NumberChecker.DivByFive(t1, t2, t3, t4); // Should log "All numbers divisible by 5: true"
