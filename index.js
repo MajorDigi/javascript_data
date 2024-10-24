@@ -80,6 +80,7 @@ const NumberChecker ={
         return allDivisibleByFive;
     },
 
+
 // NumberChecker.DivByFive(t1, t2, t3, t4); // Should log "All numbers divisible by 5: true"
 
 //------------------------------------------------------------------------------------
@@ -89,7 +90,25 @@ isFirstLargerThanLast: (t1,t2,t3,t4) => {
     console.log (`First number (${t1}) is larger than the last number (${t4})`);
     return isLarger
     }
-}
+};
 // Example usage:
 NumberChecker.DivByFive(t1, t2, t3, t4); // Should log "All numbers divisible by 5: true"
 const firstIsLarger = NumberChecker.isFirstLargerThanLast(t1, t2, t3, t4); // Will log and cache the result
+//-----------------------------------------------------------------------------------------------------------------------
+/*Arithmetic chain:
+Subtract the first number from the second number.
+Multiply the result by the third number.
+Find the remainder of dividing the result by the fourth number.*/
+
+// Function to perform the arithmetic chain
+function ArithmeticChain() {
+    const t1 = 10, t2 = 15, t3 = 20, t4 = 5;
+    return ((t2 - t1) * t3) % t4;
+}
+
+// Call the function with no arguments
+const chainResult = ArithmeticChain(); // Works fine since no arguments are needed
+console.log(`The result is: ${chainResult}`);
+
+//---------------------------------------------------------------------------------------------------------
+
