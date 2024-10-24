@@ -148,6 +148,8 @@ const g1 = 75;  // speed in mph
 const g2 = 1500; // total distance in miles
 const g3 = 3; // not used in this example
 const g4 = 23; // miles per gallon
+const pricePerGallon = 3; // cost per gallon in dollars
+const fuelBudget = 175; // fuel budget in dollars
 
 //At 75 miles per hour, you get 23 miles per gallon.
 //How many gallons of fuel will you need for the entire trip?
@@ -158,3 +160,23 @@ function gallonsOfFuel() {
 }
 const numberOfGallons = gallonsOfFuel();
 console.log(`The number of gallons of fuel equals: ${numberOfGallons}`);
+//-----------------------------------------------------------------------------------------
+//You have a fuel budget of $175
+//Will your budget be enough to cover the fuel expense?
+//The number of gallons of fuel equals: 65
+
+function expense() {
+    const gallonsNeeded = gallonsOfFuel();
+    const totalCost = gallonsNeeded * pricePerGallon; // multiply by the price per gallon
+    return totalCost;
+}
+
+// Calculate if the budget is enough
+const totalCost = expense();
+const isBudgetEnough = fuelBudget >= totalCost;
+
+// Log the results
+console.log(`You will need ${gallonsOfFuel()} gallons of fuel for the trip.`);
+console.log(`The total fuel cost for the trip is: $${totalCost}`);
+console.log(`Your fuel budget is $${fuelBudget}.`);
+console.log(isBudgetEnough ? "Your budget is enough to cover the trip." : "Your budget is NOT enough to cover the trip.");
