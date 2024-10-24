@@ -24,16 +24,16 @@ const isTwoOdd = checkOddNum(n1, n2, n3, n4);
 
 // Check three: no number larger than 25
 function checkIsOver(n1, n2, n3, n4) {
-    const isOver25 = n1 > 25 || n2 > 25 || n3 > 25 || n4 > 25;
+    const isOver25 = n1 <= 25 && n2 <= 25 && n3 <= 25 && n4 <= 25;
     // Log the result
-    console.log(`Is any number over 25: ${isOver25}`);
+    console.log(`Are all numbers less than or equal to 25: ${isOver25}`);
     return isOver25; // Return if any number is larger than 25
 }
 
 // Call the function to check and store the result
 const isOver25 = checkIsOver(n1, n2, n3, n4);
-checkIsOver(10, 15, 20, 5);  // Will log false (none are over 25)
-checkIsOver(30, 15, 20, 5);  // Will log true (one number is over 25)
+// checkIsOver(10, 15, 20, 5);  // Will log false (none are over 25)
+// checkIsOver(30, 15, 20, 5);  // Will log true (one number is over 25)
 //-----------------------------------------------------------------------------------------------------------
 
 // Check four: all unique numbers
@@ -46,8 +46,8 @@ function checkUniqueNum(n1, n2, n3, n4) {
 
 // Store results from checks
 const isUnique = checkUniqueNum(n1, n2, n3, n4); // Check uniqueness
-checkUniqueNum(1, 2, 3, 4); // Will log true
-checkUniqueNum(1, 2, 2, 3); // Will log false
+// checkUniqueNum(1, 2, 3, 4); // Will log true
+// checkUniqueNum(1, 2, 2, 3); // Will log false
 //--------------------------------------------------------------------------------------------------------
 
 // Combine results into a single variable for validation
@@ -111,4 +111,50 @@ const chainResult = ArithmeticChain(); // Works fine since no arguments are need
 console.log(`The result is: ${chainResult}`);
 
 //---------------------------------------------------------------------------------------------------------
+/*Change the way that isOver25 calculates so that we do not need to use the NOT operator (!) 
+in other logic comparisons. Rename the variable as appropriate.*/
 
+/*Before:
+// Check three: no number larger than 25
+function checkIsOver(n1, n2, n3, n4) {
+    const isOver25 = n1 > 25 || n2 > 25 || n3 > 25 || n4 > 25;
+    // Log the result
+    console.log(`Is any number over 25: ${isOver25}`);
+    return isOver25; // Return if any number is larger than 25*/
+/*Updated code: function checkIsOver(n1, n2, n3, n4) {
+    const isOver25 = n1 <= 25 && n2 <= 25 && n3 <= 25 && n4 <= 25;
+    // Log the result
+    console.log(`Are all numbers less than or equal to 25: ${isOver25}`);
+    return isOver25; // Return if any number is larger than 25
+}*/
+
+//----------------------------------------------------------------------------------------------------
+/*Part 2: Practical Math
+Let’s look at a more practical scenario.
+You are planning a cross-country road trip!
+The distance of the trip, in total, is 1,500 miles.
+Your car’s fuel efficiency is as follows:
+At 55 miles per hour, you get 30 miles per gallon.
+At 60 miles per hour, you get 28 miles per gallon.
+At 75 miles per hour, you get 23 miles per gallon.
+You have a fuel budget of $175.
+The average cost of fuel is $3 per gallon.
+Set up a program to answer the following questions:
+How many gallons of fuel will you need for the entire trip?
+Will your budget be enough to cover the fuel expense?
+How long will the trip take, in hours?*/
+
+const g1 = 75;  // speed in mph
+const g2 = 1500; // total distance in miles
+const g3 = 3; // not used in this example
+const g4 = 23; // miles per gallon
+
+//At 75 miles per hour, you get 23 miles per gallon.
+//How many gallons of fuel will you need for the entire trip?
+
+function gallonsOfFuel() {
+    const fuel = g2 / g4
+    return fuel;
+}
+const numberOfGallons = gallonsOfFuel();
+console.log(`The number of gallons of fuel equals: ${numberOfGallons}`);
