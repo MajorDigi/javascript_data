@@ -180,3 +180,13 @@ console.log(`You will need ${gallonsOfFuel()} gallons of fuel for the trip.`);
 console.log(`The total fuel cost for the trip is: $${totalCost}`);
 console.log(`Your fuel budget is $${fuelBudget}.`);
 console.log(isBudgetEnough ? "Your budget is enough to cover the trip." : "Your budget is NOT enough to cover the trip.");
+//---------------------------------------------------------------------------------------------------------------------
+//How long will the trip take, in hours?
+
+function calculateTime() {
+    const time = g2 /g1;
+    return time;
+}
+//Log results
+const tripTime = calculateTime(); //Call the function
+console.log(`It will take : ${tripTime} hours`);
